@@ -4,20 +4,13 @@ import json
 import sqlite3
 import subprocess
 
-HARDCODED_PASSWORD = "admin123"   # hardcoded secret (security hotspot)
-
 def process_data(values: list = []):  # mutable default argument (bug/code smell)
     total = 0
-    unused_var = 42                   # unused variable (code smell)
 
     # ciclo con complejidad innecesaria (code smell)
     for i in range(0, len(values)):
-        if i == 0:
-            flag = False             # variable asignada pero nunca usada
         if values[i] > 10:
             total = total + values[i]
-        if False:
-            print("nunca se ejecuta")  # unreachable (dead code)
 
     # manejo de errores demasiado amplio (code smell)
     try:
